@@ -1,0 +1,37 @@
+{
+  "name": "stellar",
+  "displayName": "Stellar",
+  "version": "1.0.0",
+  "description": "A GitHub inspired theme.",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Stellar",
+        "uiTheme": "vs-dark",
+        "path": "/dist/themes/stellar-color-theme.json"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "Louis Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "chroma-js": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.4.0",
+    "@types/node": "^18.14.6",
+    "nodemon": "^2.0.21"
+  },
+  "scripts": {
+    "dev": "nodemon --watch '*/**.ts' -e ts --exec \"npm run compile\"",
+    "package": "vsce package",
+    "compile": "tsc && node dist/main.js"
+  }
+}
