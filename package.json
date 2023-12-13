@@ -32,6 +32,6 @@
   "scripts": {
     "dev": "nodemon --watch '*/**.ts' -e ts --exec \"npm run compile\"",
     "package": "vsce package",
-    "compile": "tsc && node dist/main.js"
+    "compile": "rm -rf ./dist && tsc && node dist/main.js"
   }
 }
